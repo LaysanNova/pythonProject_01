@@ -15,6 +15,4 @@ class TestVisual:
         self.driver.get(base_url)
         main_page = HomePage(self.driver)
         main_page.press_next_carousel()
-        time.sleep(2)
         assert main_page.second_slide_is_vsible()
-        time.sleep(2)
