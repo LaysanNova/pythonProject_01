@@ -1,7 +1,6 @@
-import time
-
 import pytest
 from blaze.src.pages.MyAccount import MyAccount
+from blaze.src.pages.HomePage import HomePage
 
 
 @pytest.mark.usefixtures("init_driver")
@@ -10,8 +9,10 @@ class TestLoginNegative:
     @pytest.mark.tcid12
     def test_login_non_existing_user(self):
 
-        my_account = MyAccount(self.driver)
+        home_page = HomePage(self.driver)
+        home_page.go_to_home_page()
 
+        my_account = MyAccount(self.driver)
         my_account.go_to_my_account()
         my_account.input_login_username('UserDoesNotExist.')
         my_account.input_login_password('123Abc')

@@ -42,5 +42,11 @@ class SeleniumExtended:
             EC.alert_is_present()
         )
 
+    def wait_and_check_url_if_matches(self, url, timeout=None):
+        timeout = timeout if timeout else self.default_timeout
+
+        WebDriverWait(self.driver, timeout).until(
+            EC.url_matches(url)
+        )
 
 
