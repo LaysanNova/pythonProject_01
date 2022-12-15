@@ -46,8 +46,13 @@ class SeleniumExtended:
         timeout = timeout if timeout else self.default_timeout
 
         WebDriverWait(self.driver, timeout).until(
-            EC.url_to_be(url)
+            EC.url_matches(url)
         )
 
+    def wait_and_check_url_to_be(self, url, timeout=None):
+        timeout = timeout if timeout else self.default_timeout
 
+        WebDriverWait(self.driver, timeout).until(
+            EC.url_to_be(url)
+        )
 

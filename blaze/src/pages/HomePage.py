@@ -12,6 +12,3 @@ class HomePage(HomePageLocator):
     def go_to_home_page(self):
         base_url = get_base_url()
         self.driver.get(base_url)
-
-    def click_on_item(self):
-        self.sl.wait_and_click(self.CLICK_SAMSUNG_GALAXY_S6)
