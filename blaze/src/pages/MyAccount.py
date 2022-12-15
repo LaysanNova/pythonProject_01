@@ -11,8 +11,7 @@ class MyAccount(MyAccountLocator):
         self.sl = SeleniumExtended(self.driver)
 
     def go_to_my_account(self):
-        # base_url = get_base_url()
-        # self.driver.get(base_url)
+
         self.sl.wait_and_click(self.LOGIN_IN)
 
     def input_login_username(self, username):
