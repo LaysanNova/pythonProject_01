@@ -38,7 +38,7 @@ class TestMyAccount:
         my_account_new.sl.wait_and_input_text(MyAccount.REGISTER_USER_NAME, new_user.get('username'))
         my_account_new.sl.wait_and_input_text(MyAccount.REGISTER_PASSWORD, new_user.get('password'))
 
-        # # Test works, but not lets not using it, we don't want to create a bunch of users.
+        # # Test works, but not lets not use it, we don't want to create a bunch of users.
         # my_account_new.sl.wait_and_click(MyAccount.REGISTER_BUTTON)
         # alert_text = my_account_new.get_alert_message()
         # printing_data(dt=alert_text)
