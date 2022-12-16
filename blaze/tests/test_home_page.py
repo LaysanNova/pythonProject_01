@@ -1,8 +1,6 @@
 import pytest
 from blaze.src.pages.HomePage import HomePage
-from blaze.src.pages.MyAccount import MyAccount
 from blaze.src.pages.locators.HomePageLocator import HomePageLocator
-from blaze.src.pages.locators.MyAccountLocator import MyAccountLocator
 
 
 @pytest.mark.usefixtures("init_driver")

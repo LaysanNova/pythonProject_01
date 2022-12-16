@@ -41,7 +41,6 @@ class TestMyAccount:
         # # Test works, but not lets not use it, we don't want to create a bunch of users.
         # my_account_new.sl.wait_and_click(MyAccount.REGISTER_BUTTON)
         # alert_text = my_account_new.get_alert_message()
-        # printing_data(dt=alert_text)
         # assert alert_text == 'Sign up successful.', 'Wrong error'
 
     @pytest.mark.tcid1003
