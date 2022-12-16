@@ -50,7 +50,6 @@ class TestMyAccount:
         home_page.go_to_home_page()
 
         my_account = MyAccount(self.driver)
-        my_account.sl.wait_and_click(my_account.LOGIN_IN)
 
         valid_user = get_data_from_file(section='ValidUser1', key='username')
         valid_pass = get_data_from_file(section='ValidUser1', key='password')
