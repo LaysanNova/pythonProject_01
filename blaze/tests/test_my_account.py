@@ -18,6 +18,7 @@ class TestMyAccount:
         home_page.go_to_home_page()
 
         my_account = MyAccount(self.driver)
+
         my_account.sl.wait_and_click(my_account.LOGIN_IN)
         my_account.sl.wait_and_input_text(MyAccount.LOGIN_USER_NAME, 'UserDoesNotExist.')
         my_account.sl.wait_and_input_text(MyAccount.LOGIN_PASSWORD, '123Abc')
