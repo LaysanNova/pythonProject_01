@@ -18,7 +18,6 @@ class TestMyAccount:
         home_page.go_to_home_page()
 
         my_account = MyAccount(self.driver)
-
         my_account.sl.wait_and_click(my_account.LOGIN_IN)
         my_account.sl.wait_and_input_text(MyAccount.LOGIN_USER_NAME, 'UserDoesNotExist.')
         my_account.sl.wait_and_input_text(MyAccount.LOGIN_PASSWORD, '123Abc')
@@ -39,7 +38,7 @@ class TestMyAccount:
         my_account_new.sl.wait_and_input_text(MyAccount.REGISTER_USER_NAME, new_user.get('username'))
         my_account_new.sl.wait_and_input_text(MyAccount.REGISTER_PASSWORD, new_user.get('password'))
 
-        # # Test works, but not lets not use it, we don't want to create a bunch of users.
+        # # Test works, but let's not use it, we don't want to create a bunch of users.
         # my_account_new.sl.wait_and_click(MyAccount.REGISTER_BUTTON)
         # alert_text = my_account_new.get_alert_message()
         # assert alert_text == 'Sign up successful.', 'Wrong error'
