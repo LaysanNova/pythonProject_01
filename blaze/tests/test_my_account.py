@@ -5,7 +5,6 @@ from blaze.src.pages.HomePage import HomePage
 from blaze.src.pages.MyAccount import MyAccount
 from blaze.src.helpers.generic_helpers import generate_random_new_user
 from blaze.src.helpers.read_data import get_data_from_file
-from blaze.src.helpers.print_data import printing_data
 
 
 @pytest.mark.usefixtures("init_driver")
