@@ -19,3 +19,6 @@ class TestHomePage:
         home_page.go_to_home_page()
         home_page.sl.wait_and_click(HomePageLocator.CLICK_SAMSUNG_GALAXY_S6)
         home_page.sl.wait_and_check_url_to_be('https://www.demoblaze.com/prod.html?idp_=1')
+        home_page.sl.wait_and_click(HomePage.ADD_TO_CART)
+        alert_text = home_page.sl.wait_alert_window().text
+        assert alert_text in 'Product added'

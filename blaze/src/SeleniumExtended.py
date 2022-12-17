@@ -1,8 +1,13 @@
+import logging
+
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
 class SeleniumExtended:
+    LOGGER = logging.getLogger(__name__)
+
     def __init__(self, driver):
         self.driver = driver
         self.default_timeout = 10
@@ -38,9 +43,12 @@ class SeleniumExtended:
     def wait_alert_window(self, timeout=None):
         timeout = timeout if timeout else self.default_timeout
 
-        WebDriverWait(self.driver, timeout).until(
-            EC.alert_is_present()
-        )
+        try:
+            return WebDriverWait(self.driver, timeout).until(
+                EC.alert_is_present()
+            )
+        except TimeoutException as e:
+            self.LOGGER.error(f"TimeoutException: {e}")
 
     def wait_and_check_url_if_matches(self, url, timeout=None):
         timeout = timeout if timeout else self.default_timeout
