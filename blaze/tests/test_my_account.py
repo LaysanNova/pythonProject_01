@@ -22,7 +22,7 @@ class TestMyAccount:
         my_account.sl.wait_and_input_text(MyAccount.LOGIN_USER_NAME, 'UserDoesNotExist.')
         my_account.sl.wait_and_input_text(MyAccount.LOGIN_PASSWORD, '123Abc')
         my_account.sl.wait_and_click(MyAccount.LOGIN_BUTTON)
-        alert_text = my_account.get_alert_message()
+        alert_text = my_account.sl.wait_alert_window().text
         assert alert_text == 'User does not exist.'
 
     @pytest.mark.tcid1002
@@ -40,7 +40,7 @@ class TestMyAccount:
 
         # # Test works, but let's not use it, we don't want to create a bunch of users.
         # my_account_new.sl.wait_and_click(MyAccount.REGISTER_BUTTON)
-        # alert_text = my_account_new.get_alert_message()
+        # alert_text = my_account.sl.wait_alert_window().text
         # assert alert_text == 'Sign up successful.', 'Wrong error'
 
     @pytest.mark.tcid1003

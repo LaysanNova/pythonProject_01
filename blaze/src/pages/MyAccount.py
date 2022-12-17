@@ -15,9 +15,3 @@ class MyAccount(MyAccountLocator):
         self.sl.wait_and_input_text(MyAccount.LOGIN_USER_NAME, username)
         self.sl.wait_and_input_text(MyAccount.LOGIN_PASSWORD, password)
         self.sl.wait_and_click(MyAccount.LOGIN_BUTTON)
-
-    def get_alert_message(self):
-        self.sl.wait_alert_window()
-        alert_text = Alert(self.driver).text
-        Alert(self.driver).accept()
-        return alert_text
