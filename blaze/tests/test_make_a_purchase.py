@@ -30,6 +30,7 @@ class TestHomePage:
         purchase.sl.wait_and_input_text(CartPageLocator.YEAR_FIELD, "2022")
         purchase.sl.wait_and_click(CartPageLocator.PURCHASE_BUTTON)
         purchase.sl.wait_and_click(CartPageLocator.THANK_YOU_OK_BUTTON)
+        purchase.sl.wait_and_check_url_if_matches("https://www.demoblaze.com/index.html")
 
 
 
