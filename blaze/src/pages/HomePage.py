@@ -1,3 +1,5 @@
+from selenium.webdriver.common import alert
+
 from blaze.src.pages.locators.HomePageLocator import HomePageLocator
 from blaze.src.SeleniumExtended import SeleniumExtended
 from blaze.src.helpers.config_helpers import get_base_url
@@ -6,6 +8,7 @@ from blaze.src.helpers.config_helpers import get_base_url
 class HomePage(HomePageLocator):
 
     def __init__(self, driver):
+        self.switch_to = alert
         self.driver = driver
         self.sl = SeleniumExtended(self.driver)
 

@@ -1,8 +1,7 @@
-import logging
-
-from selenium.common.exceptions import TimeoutException
+from selenium.common import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import logging
 
 
 class SeleniumExtended:
@@ -63,4 +62,3 @@ class SeleniumExtended:
         WebDriverWait(self.driver, timeout).until(
             EC.url_to_be(url)
         )
-
