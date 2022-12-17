@@ -7,9 +7,8 @@ from blaze.src.pages.locators.HomePageLocator import HomePageLocator
 from blaze.src.pages.locators.CartPageLocator import CartPageLocator
 
 
-
 @pytest.mark.usefixtures("init_driver")
-class TestHomePage:
+class TestMakePurchase:
 
     @pytest.mark.tcid103
     def test_make_SamsungGalaxyS6_purchase(self):
