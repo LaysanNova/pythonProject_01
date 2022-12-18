@@ -4,7 +4,7 @@ from blaze.src.pages.HomePage import HomePage
 
 
 @pytest.mark.usefixtures("init_driver")
-class TestMakePurchase:
+class TestContactUs:
     @pytest.mark.tcid106
     def test_contact_us(self):
         contact_us = HomePage(self.driver)
