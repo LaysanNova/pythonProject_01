@@ -24,3 +24,9 @@ def generate_random_new_user(prefix=None):
     return random_info
 
 
+def get_random_product_from_list(items):
+
+    random_number = random.randint(1, len(items))
+    item = {'page': str(random_number), 'name': items[random_number - 1]}
+
+    return item

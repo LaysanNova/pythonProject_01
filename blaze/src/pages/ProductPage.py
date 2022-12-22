@@ -1,8 +1,8 @@
-from blaze.src.pages.locators.CartPageLocator import CartPageLocator
+from blaze.src.pages.locators.ProductPageLocator import ProductPageLocator
 from blaze.src.SeleniumExtended import SeleniumExtended
 
 
-class CartPage(CartPageLocator):
+class ProductPage(ProductPageLocator):
 
     def __init__(self, driver):
         self.driver = driver

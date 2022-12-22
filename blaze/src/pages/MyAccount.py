@@ -1,7 +1,5 @@
 from blaze.src.pages.locators.MyAccountLocator import MyAccountLocator
 from blaze.src.SeleniumExtended import SeleniumExtended
-from blaze.src.helpers.config_helpers import get_base_url
-from selenium.webdriver.common.alert import Alert
 
 
 class MyAccount(MyAccountLocator):
