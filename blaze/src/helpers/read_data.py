@@ -9,6 +9,7 @@ def get_data_from_file(section=None, key=None):
         return 'Parameters are not given.'
 
     else:
+
         config.read("../src/configs/config.ini")
         text = config.get(section, key)
 

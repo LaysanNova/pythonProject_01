@@ -35,7 +35,7 @@ class SeleniumExtended:
     def wait_until_element_is_visible(self, locator, timeout=None):
         timeout = timeout if timeout else self.default_timeout
 
-        WebDriverWait(self.driver, timeout).until(
+        return WebDriverWait(self.driver, timeout).until(
             EC.visibility_of_element_located(locator)
         )
 
@@ -62,3 +62,11 @@ class SeleniumExtended:
         WebDriverWait(self.driver, timeout).until(
             EC.url_to_be(url)
         )
+
+    def wait_until_elements_are_visible(self, locator, timeout=None):
+        timeout = timeout if timeout else self.default_timeout
+
+        return WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_all_elements_located(locator)
+              )
+
