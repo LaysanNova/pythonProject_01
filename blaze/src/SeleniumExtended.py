@@ -69,4 +69,3 @@ class SeleniumExtended:
         return WebDriverWait(self.driver, timeout).until(
                 EC.presence_of_all_elements_located(locator)
               )
-
