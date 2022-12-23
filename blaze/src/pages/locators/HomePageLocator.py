@@ -29,6 +29,7 @@ class HomePageLocator:
     # CART1 = (By.CSS_SELECTOR, "a[onclick='showcart()']")
     CART = (By.XPATH, "//a[text()='Cart']")
     FOOTER = (By.CSS_SELECTOR, "body > footer > p")
+    CLICK_PRODUCT_STORE = (By.CSS_SELECTOR, "#nava")
 
     def generate_item_locator(self, text):
         ITEM_NAME_GENERATED = (By.XPATH, "//a[text()=" + "'" + text + "'" + "]")
