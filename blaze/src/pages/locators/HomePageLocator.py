@@ -16,7 +16,7 @@ class HomePageLocator:
     CONTACT_EMAIL = (By.CSS_SELECTOR, "#recipient-email")
     CONTACT_NAME = (By.CSS_SELECTOR, "#recipient-name")
     CONTACT_MESSAGE = (By.CSS_SELECTOR, "#message-text")
-    SEND_MESSAGE = (By.XPATH, "/html/body/div[1]/div/div/div[3]/button[2]")
+    SEND_MESSAGE_BTN = (By.XPATH, "/html/body/div[1]/div/div/div[3]/button[2]")
     
     PHONES = (By.XPATH, "//a[text()='Phones']")
     LAPTOPS = (By.XPATH, "//a[text()='Laptops']")
@@ -27,7 +27,10 @@ class HomePageLocator:
 
     CART_HEADER = (By.ID, "cartur")
     CART_ON_CART_PAGE = (By.CSS_SELECTOR, "a[onclick='showcart()']")
+
     CART = (By.XPATH, "//a[text()='Cart']")
+    FOOTER = (By.CSS_SELECTOR, "body > footer > p")
+    CLICK_PRODUCT_STORE = (By.CSS_SELECTOR, "#nava")
 
     def generate_item_locator(self, text):
         ITEM_NAME_GENERATED = (By.XPATH, "//a[text()=" + "'" + text + "'" + "]")

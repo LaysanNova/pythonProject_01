@@ -25,3 +25,8 @@ class CartPageLocator:
 
 
 
+
+    # PRODUCTS_IN_CART = (By.ID, "tbodyid")
+    PRODUCTS_IN_CART = (By.CLASS_NAME, "success")
+
+

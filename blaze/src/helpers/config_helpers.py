@@ -9,3 +9,11 @@ def get_base_url():
 
     else:
         raise Exception(f'Unknown environment: {env}')
+
+
+def count_items(items):
+    lst_items = []
+    for item in items:
+        lst_items.append(item)
+
+    return len(lst_items)

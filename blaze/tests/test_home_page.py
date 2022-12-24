@@ -16,7 +16,6 @@ class TestHomePage:
 
     @pytest.mark.tcid101
     def test_click_on_item(self):
-
         click_item = HomePage(self.driver)
         click_item.go_to_home_page()
         click_item.sl.wait_and_click(HomePage.CLICK_SAMSUNG_GALAXY_S6)
@@ -24,3 +23,10 @@ class TestHomePage:
         click_item.sl.wait_and_click(ProductPage.ADD_TO_CART)
         alert_text = click_item.sl.wait_alert_window().text
         assert alert_text == 'Product added'
+
+    @pytest.mark.tcid200
+    def test_product_store_btn(self):
+        button = HomePage(self.driver)
+        button.go_to_home_page()
+        button.sl.wait_and_click(HomePage.CLICK_PRODUCT_STORE)
+        button.sl.wait_and_check_url_to_be("https://www.demoblaze.com/index.html")
