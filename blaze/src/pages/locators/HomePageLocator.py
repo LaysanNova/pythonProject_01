@@ -7,6 +7,7 @@ class HomePageLocator:
     HOME_PAGE = (By.XPATH, "//a[text()='Home ']")
     CLICK_SAMSUNG_GALAXY_S6 = (By.XPATH, "//a[text()='Samsung galaxy s6']")
     CLICK_NOKIA_LUMIA_1520 = (By.XPATH, "//*[@id='tbodyid']")
+    BLOCK_NOKIA_LUMIA_1520 = (By.XPATH, "//div[@class ='card h-100']")
 
     # 9 items on page, Phones 7, Laptops 6, Monitors 2, Total 15
     ADD_TO_CART = (By.XPATH, "//a[text()='Add to cart']")
@@ -24,8 +25,8 @@ class HomePageLocator:
     ITEM_NAME = (By.CLASS_NAME, 'hrefch')
     ITEM_BLOCK = (By.CLASS_NAME, 'card-block')
 
-    # CART = (By.ID, "cartur")
-    # CART1 = (By.CSS_SELECTOR, "a[onclick='showcart()']")
+    CART_HEADER = (By.ID, "cartur")
+    CART_ON_CART_PAGE = (By.CSS_SELECTOR, "a[onclick='showcart()']")
     CART = (By.XPATH, "//a[text()='Cart']")
 
     def generate_item_locator(self, text):
