@@ -32,9 +32,9 @@ class TestCharacteristicsByCategories:
         products = HomePage(self.driver)
         products.go_to_home_page()
         products.sl.wait_and_click(locator_categories)
-        prod_list = products.find_elements(HomePage.ITEM_BLOCK)
+        prod_list = products.get_list_of_products(HomePage.ITEM_BLOCK)
         for i in range(len(prod_list)):
             prod_data = prod_list[i].replace("$", "").split("\n")
             assert prod_data[0] != '', 'Product has no name.'
-            assert int(prod_data[1]) > 0, 'Product nas no price.'
-            assert len(prod_data[2]) > 0, 'Product nas no description.'
+            assert int(prod_data[1]) > 0, 'Product has no price.'
+            assert len(prod_data[2]) > 0, 'Product has no description.'
