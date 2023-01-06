@@ -23,4 +23,3 @@ class HomePage(HomePageLocator):
         for product in products:
             product_list.append(product.text)
         return product_list
-

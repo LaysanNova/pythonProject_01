@@ -43,30 +43,23 @@ class SeleniumExtended:
         timeout = timeout if timeout else self.default_timeout
 
         try:
-            return WebDriverWait(self.driver, timeout).until(
-                EC.alert_is_present()
-            )
+            return WebDriverWait(self.driver, timeout).until(EC.alert_is_present())
         except TimeoutException as e:
             self.LOGGER.error(f"TimeoutException: {e}")
 
     def wait_and_check_url_if_matches(self, url, timeout=None):
         timeout = timeout if timeout else self.default_timeout
 
-        WebDriverWait(self.driver, timeout).until(
-            EC.url_matches(url)
-        )
+        WebDriverWait(self.driver, timeout).until(EC.url_matches(url))
 
     def wait_and_check_url_to_be(self, url, timeout=None):
         timeout = timeout if timeout else self.default_timeout
 
-        WebDriverWait(self.driver, timeout).until(
-            EC.url_to_be(url)
-        )
+        WebDriverWait(self.driver, timeout).until(EC.url_to_be(url))
 
     def wait_until_elements_are_visible(self, locator, timeout=None):
         timeout = timeout if timeout else self.default_timeout
 
         return WebDriverWait(self.driver, timeout).until(
-                EC.presence_of_all_elements_located(locator)
-              )
-
+            EC.presence_of_all_elements_located(locator)
+        )
