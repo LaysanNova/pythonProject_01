@@ -14,7 +14,9 @@ class TestContactUs:
         contact_us.sl.wait_and_click(HomePage.CONTACT_US)
         contact_us.sl.wait_and_input_text(HomePage.CONTACT_EMAIL, "JohnSmith@gmail.com")
         contact_us.sl.wait_and_input_text(HomePage.CONTACT_NAME, "John Smith")
-        contact_us.sl.wait_and_input_text(HomePage.CONTACT_MESSAGE, "I want a new phone")
+        contact_us.sl.wait_and_input_text(
+            HomePage.CONTACT_MESSAGE, "I want a new phone"
+        )
         contact_us.sl.wait_and_click(HomePage.SEND_MESSAGE_BTN)
         alert_text = contact_us.sl.wait_alert_window().text
-        assert alert_text in 'Thanks for the message!!'
+        assert alert_text in "Thanks for the message!!"
