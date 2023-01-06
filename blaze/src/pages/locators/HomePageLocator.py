@@ -1,4 +1,3 @@
-
 from selenium.webdriver.common.by import By
 
 
@@ -17,13 +16,13 @@ class HomePageLocator:
     CONTACT_NAME = (By.CSS_SELECTOR, "#recipient-name")
     CONTACT_MESSAGE = (By.CSS_SELECTOR, "#message-text")
     SEND_MESSAGE_BTN = (By.XPATH, "/html/body/div[1]/div/div/div[3]/button[2]")
-    
+
     PHONES = (By.XPATH, "//a[text()='Phones']")
     LAPTOPS = (By.XPATH, "//a[text()='Laptops']")
     MONITORS = (By.XPATH, "//a[text()='Monitors']")
 
-    ITEM_NAME = (By.CLASS_NAME, 'hrefch')
-    ITEM_BLOCK = (By.CLASS_NAME, 'card-block')
+    ITEM_NAME = (By.CLASS_NAME, "hrefch")
+    ITEM_BLOCK = (By.CLASS_NAME, "card-block")
 
     CART_HEADER = (By.ID, "cartur")
     CART_ON_CART_PAGE = (By.CSS_SELECTOR, "a[onclick='showcart()']")
@@ -35,4 +34,3 @@ class HomePageLocator:
     def generate_item_locator(self, text):
         ITEM_NAME_GENERATED = (By.XPATH, "//a[text()=" + "'" + text + "'" + "]")
         return ITEM_NAME_GENERATED
-

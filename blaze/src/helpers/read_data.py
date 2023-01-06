@@ -6,7 +6,7 @@ config = ConfigParser()
 def get_data_from_file(section=None, key=None):
 
     if section == None or key == None:
-        return 'Parameters are not given.'
+        return "Parameters are not given."
 
     else:
 
@@ -14,4 +14,3 @@ def get_data_from_file(section=None, key=None):
         text = config.get(section, key)
 
         return text
-

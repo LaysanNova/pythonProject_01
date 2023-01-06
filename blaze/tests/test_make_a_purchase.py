@@ -9,13 +9,14 @@ from blaze.src.pages.locators.CartPageLocator import CartPageLocator
 
 @pytest.mark.usefixtures("init_driver")
 class TestMakePurchase:
-
     @pytest.mark.tcid103
     def test_make_SamsungGalaxyS6_purchase(self):
         purchase = HomePage(self.driver)
         purchase.go_to_home_page()
         purchase.sl.wait_and_click(HomePageLocator.CLICK_SAMSUNG_GALAXY_S6)
-        purchase.sl.wait_and_check_url_to_be('https://www.demoblaze.com/prod.html?idp_=1')
+        purchase.sl.wait_and_check_url_to_be(
+            "https://www.demoblaze.com/prod.html?idp_=1"
+        )
         purchase.sl.wait_and_click(SamsungGalaxyS6Page.SAMSUNG_GALAXY_S6_ADD_TO_CART)
         purchase.sl.wait_alert_window()
         alert = purchase.switch_to.Alert
@@ -29,8 +30,3 @@ class TestMakePurchase:
         purchase.sl.wait_and_input_text(CartPageLocator.YEAR_FIELD, "2022")
         purchase.sl.wait_and_click(CartPageLocator.PURCHASE_BUTTON)
         purchase.sl.wait_and_click(CartPageLocator.THANK_YOU_OK_BUTTON)
-
-
-
-
-
