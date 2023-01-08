@@ -35,6 +35,3 @@ class TestItemDisplayed:
         driver.sl.wait_and_click(CartPageLocator.PURCHASE_BUTTON)
         driver.sl.wait_and_click(CartPageLocator.THANK_YOU_OK_BUTTON)
         assert element, "Copyright is not displayed"
-
-
-
